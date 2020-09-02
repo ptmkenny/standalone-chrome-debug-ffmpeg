@@ -7,12 +7,16 @@ https://github.com/SeleniumHQ/docker-selenium/issues/148
 
 ## Take screen recording
 
-Use `docker exec -ti bash` to spawn a new shell inside a running container. Run this command to record the video:
+For example, if your docker container is ptmkenny_seleniumchromedriver_1:
 
-`ffmpeg -video_size 1360x1020 -framerate 15 -f x11grab -i :99.0 /path/to/recording.mp4`
+`docker exec -ti ptmkenny_seleniumchromedriver_1 ffmpeg -video_size 1360x1020 -framerate 15 -f x11grab -i :99.0 behat-lando.mp4`
+
+Use CTRL+D to quit.  Then you can copy the video file out of the docker container like this:
+
+'docker cp ptmkenny_seleniumchromedriver_1:/behat-lando.mp4 .'
 
 ## Clean up the MP4 file
 
-Use MP4Box to clean up the video:
+The poster in the original issue suggests you may need to use MP4Box to clean up the video:
 
 `MP4Box -isma -inter 500 /path/to/recording.mp4`
