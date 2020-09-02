@@ -11,7 +11,7 @@ For example, if your docker container is ptmkenny_seleniumchromedriver_1:
 
 `docker exec -ti ptmkenny_seleniumchromedriver_1 ffmpeg -video_size 1360x1020 -framerate 15 -f x11grab -i :99.0 behat-lando.mp4`
 
-Use CTRL+D to quit.  Then you can copy the video file out of the docker container like this:
+Use CTRL+C to quit.  Then you can copy the video file out of the docker container like this:
 
 'docker cp ptmkenny_seleniumchromedriver_1:/behat-lando.mp4 .'
 
