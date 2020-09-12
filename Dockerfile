@@ -16,5 +16,5 @@ RUN apt-get update && \
 # Add SSL support for stripe
 # https://docs.lando.dev/config/security.html#certificates
 # RUN cp lndo.site.pem lndo.site.crt /usr/local/share/ca-certificates
-COPY lndo.site.pem lndo.site.crt ./
-# RUN update-ca-certificates
+COPY lndo.site.pem lndo.site.crt /usr/local/share/ca-certificates
+RUN update-ca-certificates
