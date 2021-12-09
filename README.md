@@ -20,3 +20,10 @@ Use CTRL+C to quit.  Then you can copy the video file out of the docker containe
 The poster in the original issue suggests you may need to use MP4Box to clean up the video:
 
 `MP4Box -isma -inter 500 /path/to/recording.mp4`
+
+# build
+
+# Build it
+
+docker build -t ptmkenny/standalone-chrome-debug-ffmpeg .
+docker push ptmkenny/standalone-chrome-debug-ffmpeg
