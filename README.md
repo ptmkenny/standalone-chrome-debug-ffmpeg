@@ -23,7 +23,16 @@ The poster in the original issue suggests you may need to use MP4Box to clean up
 
 # build
 
-# Build it
+## build for docker hub
 
+```
 docker build -t ptmkenny/standalone-chrome-debug-ffmpeg .
 docker push ptmkenny/standalone-chrome-debug-ffmpeg
+```
+
+## push a tag
+
+```
+docker tag ptmkenny/standalone-chrome-debug-ffmpeg:latest ptmkenny/standalone-chrome-debug-ffmpeg:tagname
+docker push ptmkenny/standalone-chrome-debug-ffmpeg:tagname
+```
