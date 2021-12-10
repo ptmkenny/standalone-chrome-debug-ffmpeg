@@ -13,7 +13,7 @@ For example, if your docker container is ptmkenny_seleniumchromedriver_1:
 
 Use CTRL+C to quit.  Then you can copy the video file out of the docker container like this:
 
-'docker cp ptmkenny_seleniumchromedriver_1:/behat-lando.mp4 .'
+`docker cp ptmkenny_seleniumchromedriver_1:/behat-lando.mp4 .`
 
 ## Clean up the MP4 file
 
